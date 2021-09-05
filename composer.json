@@ -1,0 +1,56 @@
+{
+  "name": "ddtech/laravel-password-policy",
+  "description": "Associate password policy with Eloquent models",
+  "keywords": [
+    "ddtech",
+    "laravel-password-policy",
+    "password",
+    "laravel"
+  ],
+  "homepage": "https://github.com/ddtechtr/laravel-password-policy",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Muhammed Said Çakır",
+      "email": "said.cakir@ddtech.com.tr",
+      "homepage": "https://ddtech.com.tr",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "ext-exif": "*",
+    "ext-fileinfo": "*",
+    "ext-json": "*",
+    "illuminate/database": "^7.0|^8.0"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "DDTech\\PasswordPolicy\\": "src/"
+    }
+  },
+  "scripts": {
+    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+    "test": "vendor/bin/phpunit"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DDTech\\LaravelPasswordPolicy\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DDTech\\PasswordPolicy\\PasswordPolicyServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
