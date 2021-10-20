@@ -29,20 +29,6 @@ trait PasswordRecords
     public function triggerPasswordRecord($password) {
         $this->passwords()->create(['password' => $password, 'created_at'=> Date::now()]);
 
-/*        if ($model->exists) {
-            $this->passwords()->sync($passwords, false);
-            $model->load('password_records');
-        } else {
-            $class = \get_class($model);
-
-            $class::saved(
-                function ($object) use ($passwords, $model) {
-                    $model->passwords()->sync($passwords, false);
-                    $model->load('password_records');
-                }
-            );
-        }
-*/
         return $this;
     }
 
